@@ -3,16 +3,19 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-  - url: /(.+\.(gif|png|jpg|css|otf|eot|svg|ttf|woff|js|ico|html|mp4))$
+  - url: /(.+\.(gif|png|jpg|css|otf|eot|svg|ttf|woff|js|ico|html|mp4|txt))$
     application_readable: true
     static_files: \1
-    upload: .+\.(gif|png|jpg|css|otf|eot|svg|ttf|woff|js|ico|html|mp4)$
+    upload: .+\.(gif|png|jpg|css|otf|eot|svg|ttf|woff|js|ico|html|mp4|txt)$
+    secure: always
   - url: /(.+\.php)$
     script: \1
+    secure: always
   - url: /
     application_readable: true
     static_files: index.html
     upload: index.html
+    secure: always
 
 skip_files:
   - ^(.*/)?app\.yaml
