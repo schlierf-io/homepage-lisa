@@ -34,7 +34,7 @@
 
 	#header,
 	#header-wrap,
-	#logo img { height: 80px; }
+	#logo img { height: 200px; }
 
 	#header.sticky-header:not(.static-sticky),
 	#header.sticky-header:not(.static-sticky) #header-wrap,
